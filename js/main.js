@@ -1,28 +1,36 @@
 // gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to('.object', {
+// gsap.from('.object', {
 //     scrollTrigger: {
 //         trigger: '.object',
 //         markers: true
 //     },
-//     x: 200, 
+//     x: -200, 
 //     duration: .5, 
 //     delay: .5,
 // });
 
 // const object = document.querySelector('.object');
-const container = document.querySelector('.container');
+// const container = document.querySelector('.container');
+// let x, y;
+// let xTo = gsap.quickTo(".object", "x", {ease: "power3"}),
+//     yTo = gsap.quickTo(".object", "y", {duration: 0.6, ease: "power3"});
 
-container.addEventListener('mousemove', (e) => {
-    let x, y;
+// container.addEventListener('mousemove', move)
 
-    x = (e.clientX / 10);
-    y = e.clientY / 10;
+// function move(e) {
+//     const safeToAnimate = window.matchMedia(
+//         "(prefers-reduced-motion: no-preference)"
+//       ).matches;
 
-    // console.log(x);
-
-    gsap.to('.object', {
-        x: x,
-        y: y,
-    })
-})
+//     if (!safeToAnimate) {
+//         container.removeEventListener('mousemove', move);
+//         return;
+//     }
+    
+//     x = (100 * e.clientX) / window.innerWidth - 50;
+//     y = (100 * e.clientY) / window.innerHeight - 50;
+    
+//     xTo(x);
+//     yTo(y);
+// }
