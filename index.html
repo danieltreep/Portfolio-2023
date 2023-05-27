@@ -5,15 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bubbles.css">
     <title>Document</title>
 </head>
-<body class="container">
-    <div class="object"></div>
-    <!-- <div class="object"></div>
-    <div class="object"></div> -->
+<body>
+    <header>
+        <h3>DANIËL <br> TREEP</h3>
+        <nav>
+            <a href="" class="active">ABOUT</a>
+            <a href="" >PROJECTS</a>
+            <a href="">CONTACT</a>
+            <div class="scrollTracker" aria-hidden="true"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            
+            <h1>FRONTEND DEVELOPER <br> WITH AN EYE FOR <br><span class="highlight">DESIGN</span><span class="expanding-dot"></span></h1>
+            <button>Download CV
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.29289 15.7071C7.68342 16.0976 8.31658 16.0976 8.70711 15.7071L15.0711 9.34315C15.4616 8.95262 15.4616 8.31946 15.0711 7.92893C14.6805 7.53841 14.0474 7.53841 13.6569 7.92893L8 13.5858L2.34315 7.92893C1.95262 7.53841 1.31946 7.53841 0.928932 7.92893C0.538408 8.31946 0.538408 8.95262 0.928932 9.34315L7.29289 15.7071ZM7 0L7 15H9V0L7 0Z" fill="black"/>
+                </svg>
+            </button>
+            <p class="location">AMSTERDAM</p>
+            <svg class="scroller" aria-hidden="true" width="25" height="50" viewBox="0 0 25 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect id="mouse" x="1" y="1" width="23" height="48" rx="11.5" stroke="#0D0D0D" stroke-width="2"/>
+                <rect id="scroller" x="9" y="9.18182" width="7" height="12.5455" rx="3.5" stroke="#0D0D0D" stroke-width="2"/>
+            </svg>
+            
+            <div aria-hidden="true" class="bubble small one">1
+                <img src="images/waldo.png">
+            </div>
+            <div aria-hidden="true" class="bubble small two">2</div>
+            <div aria-hidden="true" class="bubble medium three">3</div>
+            <div aria-hidden="true" class="bubble large four">4</div>
+            <div aria-hidden="true" class="bubble large five">5</div>
+            <div aria-hidden="true" class="bubble large six">6</div>
+            
+        </section>
+        <section class="about">
+            <h2>ABOUT</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia praesentium eaque eveniet ea architecto similique optio a nesciunt. </p>
+            <div aria-hidden="true" class="bubble medium photobubble" aria-hidden="true">
+                <img src="images/Ik.jpg" alt="This is me">
+            </div>
+        </section>
+        <section class="overlay">
+            <div aria-hidden="true" class="bubble"></div>
+            <div aria-hidden="true" class="bubble"></div>
+            <img src="images/bottle.svg" alt="decorative bottle">
+        </section>
+        <section class="projects">
+            <h2>PROJECTS</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <img src="images/RealEstateCare.jpg" alt="">
+                    <h4>RealEstateCare</h4>
+                    <a href="">VIEW
+                        <svg aria-hidden="true" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.42648 3.33325V4.81473H10.8844L3.04413 13.3999L3.99795 14.4443L11.8382 5.85917V10.7406H13.1912V3.33325H6.42648Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="images/RealEstateCare.jpg" alt="">
+                    <h4></h4>
+                    <a href="">VIEW
+                        <svg aria-hidden="true" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.42648 3.33325V4.81473H10.8844L3.04413 13.3999L3.99795 14.4443L11.8382 5.85917V10.7406H13.1912V3.33325H6.42648Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="images/RealEstateCare.jpg" alt="">
+                    <h4></h4>
+                    <a href="">VIEW
+                        <svg aria-hidden="true" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.42648 3.33325V4.81473H10.8844L3.04413 13.3999L3.99795 14.4443L11.8382 5.85917V10.7406H13.1912V3.33325H6.42648Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="skills">
+            <h2>SKILLS</h2>
+            <div class="row">
+                <svg aria-hidden="true" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM21 7L1 7V9L21 9V7Z" fill="#60EBA8"/>
+                </svg>
+                HTML CSS JAVASCRIPT REACT VUE GSAP</div>
+            <div class="row">TYPESCRIPT FIREBASE FIGMA MYSQL PHP 
+                <svg aria-hidden="true" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7071 7.29289C21.0976 7.68342 21.0976 8.31658 20.7071 8.70711L14.3431 15.0711C13.9526 15.4616 13.3195 15.4616 12.9289 15.0711C12.5384 14.6805 12.5384 14.0474 12.9289 13.6569L18.5858 8L12.9289 2.34315C12.5384 1.95262 12.5384 1.31946 12.9289 0.928932C13.3195 0.538408 13.9526 0.538408 14.3431 0.928932L20.7071 7.29289ZM0 7L20 7V9L0 9L0 7Z" fill="#60EBA8"/>
+                </svg>                    
+            </div>
+        </section>
+        <section class="contact">
+            <h2>CONTACT</h2>
+            <form action="">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <button type="submit">SEND <img src="images/arrow-right.svg" aria-hidden="true"></button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="links">
+            <a href="">
+                <svg aria-hidden="true" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.42648 3.33325V4.81473H10.8844L3.04413 13.3999L3.99795 14.4443L11.8382 5.85917V10.7406H13.1912V3.33325H6.42648Z" fill="black"/>
+                </svg>
+            </a>
+            <a href="">
+                <svg aria-hidden="true" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.42648 3.33325V4.81473H10.8844L3.04413 13.3999L3.99795 14.4443L11.8382 5.85917V10.7406H13.1912V3.33325H6.42648Z" fill="black"/>
+                </svg>
+            </a>
+            <a href="">
+                <svg aria-hidden="true" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.42648 3.33325V4.81473H10.8844L3.04413 13.3999L3.99795 14.4443L11.8382 5.85917V10.7406H13.1912V3.33325H6.42648Z" fill="black"/>
+                </svg>
+            </a>
+        </div>
+        <p>Can you find waldo?</p>
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> -->
 </body>
 </html>
