@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'ITC Avant Garde Gothic';
+    src: url('AvantGardeCE-Demi.eot');
+    src: url('AvantGardeCE-Demi.eot?#iefix') format('embedded-opentype'),
+        url('AvantGardeCE-Demi.woff2') format('woff2'),
+        url('AvantGardeCE-Demi.woff') format('woff'),
+        url('AvantGardeCE-Demi.ttf') format('truetype'),
+        url('AvantGardeCE-Demi.svg#AvantGardeCE-Demi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

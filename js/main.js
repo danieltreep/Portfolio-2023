@@ -1,14 +1,40 @@
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// gsap.from('.object', {
-//     scrollTrigger: {
-//         trigger: '.object',
-//         markers: true
-//     },
-//     x: -200, 
-//     duration: .5, 
-//     delay: .5,
-// });
+gsap.from('.photobubble', {
+    scrollTrigger: {
+        trigger: '.photobubble',
+    },
+    y: 200, 
+    duration: 1, 
+});
+
+gsap.to('.photo', {
+    scrollTrigger: {
+        trigger: '.about',
+       
+    },
+    opacity: 1,
+    duration: 1,
+    delay: 1
+});
+
+gsap.to('.fade', {
+    scrollTrigger: {
+        trigger: '.fade',
+        // markers: true,
+        scrub: true,
+        start: "top 15%",
+        end: "bottom 5%",
+    },
+    opacity: 0
+});
+
+gsap.to('.expanding-dot', {
+    width: 120,
+    duration: .5,
+    delay: 1,
+    y: 3
+});
 
 // const object = document.querySelector('.object');
 // const container = document.querySelector('.container');
@@ -34,3 +60,18 @@
 //     xTo(x);
 //     yTo(y);
 // }
+
+const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".home",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+  
+  gsap.utils.toArray(".bubble").forEach(bubble => {
+    const speed = bubble.dataset.speed;
+    const movement = -(bubble.offsetHeight * speed)
+    tl.to(bubble, {y: movement, ease: "none"}, 0)
+  });
