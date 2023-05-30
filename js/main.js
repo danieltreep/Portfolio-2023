@@ -96,7 +96,7 @@ function fadeIn(element) {
 const fadein = gsap.timeline({
     scrollTrigger: {
         trigger: ".fadein",
-        markers: true,
+        // markers: true,
         stagger: {
             repeat: -1
         }
@@ -107,3 +107,25 @@ gsap.utils.toArray(".fadein").forEach(element => {
     fadein.from(element, {opacity: 0, y: 50, duration: .8});
 })
 
+// Slide in 
+gsap.to('.first-row', {
+    scrollTrigger: {
+        trigger: '.bottle',
+        scrub: true,
+        start: 'top 60%',
+        end: '350 40%',
+        markers: true
+    },
+    xPercent: -50
+})
+
+gsap.to('.second-row', {
+    scrollTrigger: {
+        trigger: '.bottle',
+        scrub: true,
+        start: 'top 60%',
+        end: '350 40%',
+        markers: true
+    },
+    xPercent: 50
+})
