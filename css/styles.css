@@ -56,7 +56,8 @@ header {
     position: sticky;
     top: 0;
     height: 75px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.26);
+    z-index: 10;
 }
 header h3 {
     font-size: var(--font-size-small);
@@ -257,7 +258,7 @@ h2 {
     font-size: 36px;
     overflow: hidden;
     position: relative;
-    padding-bottom: 8rem;
+    padding-bottom: 12rem;
 }
 .row {
     width: max-content;
@@ -283,7 +284,7 @@ h2 {
 .contact {
     background-color: black;
     color: white;
-    padding: 2rem;
+    padding: 15vw;
 }
 form {
     display: flex;

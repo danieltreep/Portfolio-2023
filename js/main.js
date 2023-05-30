@@ -114,9 +114,9 @@ gsap.to('.first-row', {
         scrub: true,
         start: 'top 60%',
         end: '350 40%',
-        markers: true
+        // markers: true
     },
-    xPercent: -50
+    xPercent: -60
 })
 
 gsap.to('.second-row', {
@@ -125,7 +125,7 @@ gsap.to('.second-row', {
         scrub: true,
         start: 'top 60%',
         end: '350 40%',
-        markers: true
+        // markers: true
     },
-    xPercent: 50
+    xPercent: 60
 })
