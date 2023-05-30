@@ -30,29 +30,29 @@ gsap.to('.fade', {
 });
 
 // Bubbles mousemovement
-const home = document.querySelector('.home');
-let x, y;
-let xTo = gsap.quickTo(".bubbleanimate", "x", {ease: "power3"}),
-    yTo = gsap.quickTo(".bubbleanimate", "y", {duration: 0.6, ease: "power3"});
+// const home = document.querySelector('.home');
+// let x, y;
+// let xTo = gsap.quickTo(".bubbleanimate", "x", {ease: "power3"}),
+//     yTo = gsap.quickTo(".bubbleanimate", "y", {duration: 0.6, ease: "power3"});
 
-home.addEventListener('mousemove', move)
+// home.addEventListener('mousemove', move)
 
-function move(e) {
-    const safeToAnimate = window.matchMedia(
-        "(prefers-reduced-motion: no-preference)"
-      ).matches;
+// function move(e) {
+//     const safeToAnimate = window.matchMedia(
+//         "(prefers-reduced-motion: no-preference)"
+//       ).matches;
 
-    if (!safeToAnimate) {
-        home.removeEventListener('mousemove', move);
-        return;
-    }
+//     if (!safeToAnimate) {
+//         home.removeEventListener('mousemove', move);
+//         return;
+//     }
     
-    x = (100 * e.clientX) / window.innerWidth - 5;
-    y = (100 * e.clientY) / window.innerHeight - 50;
+//     x = (100 * e.clientX) / window.innerWidth - 5;
+//     y = (100 * e.clientY) / window.innerHeight - 50;
     
-    xTo(x);
-    yTo(y);
-}
+//     xTo(x);
+//     yTo(y);
+// }
 
 // Bubbles paralax
 const tl = gsap.timeline({
@@ -131,13 +131,6 @@ gsap.to('.second-row', {
 })
 
 // NAV 
-// gsap.to('.mainnav a', {
-//     scrollTrigger: {
-//         trigger: '.bottle',
-//         scrub: true
-//     },
-//     color: 'white'
-// })
 
 gsap.to('header', {
     scrollTrigger: {

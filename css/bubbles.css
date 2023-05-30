@@ -25,6 +25,9 @@
 .waldo:hover {
     opacity: 1;
 }
+.tiny {
+    height: 20px;
+}
 .small {
     height: var(--bubble-small);
 }
@@ -64,4 +67,12 @@
     margin: 4rem auto;
     z-index: 0;
     opacity: 1;
+}
+.overlay .bubble.small {
+    top: 0;
+    left: 30%;
+}
+.overlay .bubble.tiny {
+    top: 30%;
+    right: 30%;
 }
