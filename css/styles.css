@@ -56,7 +56,7 @@ header {
     position: sticky;
     top: 0;
     height: 75px;
-    background-color: rgba(0, 0, 0, 0.26);
+    /* background-color: rgba(0, 0, 0, 0.26); */
     z-index: 10;
 }
 header h3 {
@@ -70,25 +70,24 @@ nav {
     justify-content: space-between;
     text-align: end;
     gap: .2rem;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     font-size: var(--font-size-smallest);
     isolation: isolate;
+    color: white;
 }
 nav .scrollTracker {
     position: absolute;
-    width: 4px;
-    height: 100%;
-    top: 0;
-    right: -1rem;
+    width: 40px;
+    height: 5px;
+    top: 4px;
+    right: -3rem;
     background-color: var(--main-color);
-    margin-left: 1rem;
     border-radius: 2px;
 }
 a {
     text-decoration: none;
     color: black;
     transition: .3s;
-    mix-blend-mode: difference;
 }
 a.active {
     font-size: calc(var(--font-size-smallest) + 2px);

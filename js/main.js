@@ -112,7 +112,7 @@ gsap.to('.first-row', {
     scrollTrigger: {
         trigger: '.bottle',
         scrub: true,
-        start: 'top 60%',
+        start: 'top 55%',
         end: '350 40%',
         // markers: true
     },
@@ -123,9 +123,89 @@ gsap.to('.second-row', {
     scrollTrigger: {
         trigger: '.bottle',
         scrub: true,
-        start: 'top 60%',
+        start: 'top 55%',
         end: '350 40%',
         // markers: true
     },
     xPercent: 60
+})
+
+// NAV 
+// gsap.to('.mainnav a', {
+//     scrollTrigger: {
+//         trigger: '.bottle',
+//         scrub: true
+//     },
+//     color: 'white'
+// })
+
+gsap.to('header', {
+    scrollTrigger: {
+        trigger: '.bottle',
+        scrub: true
+    },
+    backgroundColor: 'black'
+})
+
+// gsap.to('.mainnav a:nth-of-type(1)', {
+//     scrollTrigger: {
+//         trigger: '.about',
+//         scrub: true,
+//         toggleClass: {
+//             targets: ".mainnav a:nth-of-type(1)", 
+//             className: "active"
+//         }
+//     }
+// })
+
+gsap.to('.mainnav a:nth-of-type(2)', {
+    scrollTrigger: {
+        trigger: '.projects',
+        scrub: true,
+        toggleClass: {
+            targets: ".mainnav a:nth-of-type(2)", 
+            className: "active"
+        },
+        end: 'bottom 40%'
+    }
+})
+
+gsap.to('.mainnav a:nth-of-type(3)', {
+    scrollTrigger: {
+        trigger: '.contact',
+        scrub: true,
+        toggleClass: {
+            targets: ".mainnav a:nth-of-type(3)", 
+            className: "active"
+        }
+    }
+})
+
+const a1 = gsap.timeline({
+    defaults: {
+        scrollTrigger: {
+            trigger: '.about',
+            scrub: true
+        }
+    }
+})
+
+a1.to('.mainnav a:nth-of-type(1)', {
+    scrollTrigger: {
+        
+        toggleClass: {
+            targets: ".mainnav a:nth-of-type(1)", 
+            className: "active"
+        },
+        start: 'top 90%'
+    },
+})
+.from('.scrollTracker', {
+    scrollTrigger: {
+        toggleClass: {
+            targets: ".mainnav a:nth-of-type(1)", 
+            className: "active"
+        }
+    },
+    right: '-4rem'
 })
