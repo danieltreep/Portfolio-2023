@@ -56,8 +56,10 @@ header {
     position: sticky;
     top: 0;
     height: 75px;
+    /* backdrop-filter: blur(100%); */
     /* background-color: rgba(0, 0, 0, 0.26); */
     z-index: 10;
+    color: white;
 }
 header h3 {
     font-size: var(--font-size-small);
@@ -75,18 +77,9 @@ nav {
     isolation: isolate;
     color: white;
 }
-nav .scrollTracker {
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    top: 4px;
-    right: -3rem;
-    background-color: var(--main-color);
-    border-radius: 2px;
-}
 a {
     text-decoration: none;
-    color: black;
+    color: white;
     transition: .3s;
 }
 a.active {
@@ -208,7 +201,7 @@ h2 {
 /* PROJECTS SECTION */
 .projects {
     background-color: black;
-    padding-block: 4rem;
+    padding-block: 8rem;
 }
 .projects-container {
     overflow-x: scroll;

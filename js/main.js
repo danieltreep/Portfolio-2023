@@ -144,19 +144,20 @@ gsap.to('header', {
         trigger: '.bottle',
         scrub: true
     },
-    backgroundColor: 'black'
+    backgroundColor: '#00000090',
+    backdropFilter: 'invert(80%)'
 })
 
-// gsap.to('.mainnav a:nth-of-type(1)', {
-//     scrollTrigger: {
-//         trigger: '.about',
-//         scrub: true,
-//         toggleClass: {
-//             targets: ".mainnav a:nth-of-type(1)", 
-//             className: "active"
-//         }
-//     }
-// })
+gsap.to('.mainnav a:nth-of-type(1)', {
+    scrollTrigger: {
+        trigger: '.about',
+        scrub: true,
+        toggleClass: {
+            targets: ".mainnav a:nth-of-type(1)", 
+            className: "active"
+        }
+    }
+})
 
 gsap.to('.mainnav a:nth-of-type(2)', {
     scrollTrigger: {
@@ -177,35 +178,8 @@ gsap.to('.mainnav a:nth-of-type(3)', {
         toggleClass: {
             targets: ".mainnav a:nth-of-type(3)", 
             className: "active"
-        }
-    }
-})
-
-const a1 = gsap.timeline({
-    defaults: {
-        scrollTrigger: {
-            trigger: '.about',
-            scrub: true
-        }
-    }
-})
-
-a1.to('.mainnav a:nth-of-type(1)', {
-    scrollTrigger: {
-        
-        toggleClass: {
-            targets: ".mainnav a:nth-of-type(1)", 
-            className: "active"
         },
-        start: 'top 90%'
-    },
+        start: '200px 80%',
+    }
 })
-.from('.scrollTracker', {
-    scrollTrigger: {
-        toggleClass: {
-            targets: ".mainnav a:nth-of-type(1)", 
-            className: "active"
-        }
-    },
-    right: '-4rem'
-})
+
