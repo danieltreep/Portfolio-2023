@@ -145,7 +145,7 @@ gsap.to('header', {
         scrub: true
     },
     backgroundColor: '#00000090',
-    backdropFilter: 'invert(80%)'
+    backdropFilter: 'invert(100%)'
 })
 
 gsap.to('.mainnav a:nth-of-type(1)', {

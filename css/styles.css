@@ -75,7 +75,6 @@ nav {
     /* margin-right: 1rem; */
     font-size: var(--font-size-smallest);
     isolation: isolate;
-    color: white;
 }
 a {
     text-decoration: none;
