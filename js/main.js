@@ -10,8 +10,11 @@ const photobubbletl = gsap.timeline({defaults: {
     },
 }});
 
-photobubbletl.from('.photobubble', {y: 300})
-    .to('.photo', { opacity: 1, delay: 1 });
+photobubbletl.from('.photobubble', {y: 400})
+    .to('.photo', { opacity: 1 });
+
+
+
 
 
 // Fade out
@@ -63,9 +66,9 @@ const tl = gsap.timeline({
 });
 
 gsap.utils.toArray(".bubbleanimate").forEach(bubble => {
-const speed = bubble.dataset.speed;
-const movement = -(bubble.offsetHeight * speed)
-tl.to(bubble, {y: movement, ease: "none"}, 0)
+    const speed = bubble.dataset.speed;
+    const movement = -(bubble.offsetHeight * speed)
+    tl.to(bubble, {y: movement, ease: "none"}, 0)
 });
 
 // Home timeline
@@ -81,3 +84,26 @@ hometl.from('.titlespan', {
     width: 6,
     duration: .5,
 }) 
+
+// Fadein class
+function fadeIn(element) {
+    gsap.from(element, {
+        y: 50,
+        opacity: 0,
+    });
+}
+
+const fadein = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".fadein",
+        markers: true,
+        stagger: {
+            repeat: -1
+        }
+   }
+});
+
+gsap.utils.toArray(".fadein").forEach(element => {
+    fadein.from(element, {opacity: 0, y: 50, duration: .8});
+})
+
