@@ -1,23 +1,20 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.photobubble', {
-    scrollTrigger: {
-        trigger: '.photobubble',
-    },
-    y: 200, 
-    duration: 1, 
-});
-
-gsap.to('.photo', {
+// Photobubble
+const photobubbletl = gsap.timeline({defaults: {
     scrollTrigger: {
         trigger: '.about',
-       
+        scrub: true,
+        // markers: true,
+        end: '100'
     },
-    opacity: 1,
-    duration: 1,
-    delay: 1
-});
+}});
 
+photobubbletl.from('.photobubble', {y: 300})
+    .to('.photo', { opacity: 1, delay: 1 });
+
+
+// Fade out
 gsap.to('.fade', {
     scrollTrigger: {
         trigger: '.fade',
@@ -29,49 +26,58 @@ gsap.to('.fade', {
     opacity: 0
 });
 
-gsap.to('.expanding-dot', {
-    width: 120,
-    duration: .5,
-    delay: 1,
-    y: 3
-});
+// Bubbles mousemovement
+const home = document.querySelector('.home');
+let x, y;
+let xTo = gsap.quickTo(".bubbleanimate", "x", {ease: "power3"}),
+    yTo = gsap.quickTo(".bubbleanimate", "y", {duration: 0.6, ease: "power3"});
 
-// const object = document.querySelector('.object');
-// const container = document.querySelector('.container');
-// let x, y;
-// let xTo = gsap.quickTo(".object", "x", {ease: "power3"}),
-//     yTo = gsap.quickTo(".object", "y", {duration: 0.6, ease: "power3"});
+home.addEventListener('mousemove', move)
 
-// container.addEventListener('mousemove', move)
+function move(e) {
+    const safeToAnimate = window.matchMedia(
+        "(prefers-reduced-motion: no-preference)"
+      ).matches;
 
-// function move(e) {
-//     const safeToAnimate = window.matchMedia(
-//         "(prefers-reduced-motion: no-preference)"
-//       ).matches;
-
-//     if (!safeToAnimate) {
-//         container.removeEventListener('mousemove', move);
-//         return;
-//     }
+    if (!safeToAnimate) {
+        home.removeEventListener('mousemove', move);
+        return;
+    }
     
-//     x = (100 * e.clientX) / window.innerWidth - 50;
-//     y = (100 * e.clientY) / window.innerHeight - 50;
+    x = (100 * e.clientX) / window.innerWidth - 5;
+    y = (100 * e.clientY) / window.innerHeight - 50;
     
-//     xTo(x);
-//     yTo(y);
-// }
+    xTo(x);
+    yTo(y);
+}
 
+// Bubbles paralax
 const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".home",
       start: "top top",
       end: "bottom top",
-      scrub: true
+      scrub: true,
+    //   markers: true
     }
-  });
-  
-  gsap.utils.toArray(".bubble").forEach(bubble => {
-    const speed = bubble.dataset.speed;
-    const movement = -(bubble.offsetHeight * speed)
-    tl.to(bubble, {y: movement, ease: "none"}, 0)
-  });
+});
+
+gsap.utils.toArray(".bubbleanimate").forEach(bubble => {
+const speed = bubble.dataset.speed;
+const movement = -(bubble.offsetHeight * speed)
+tl.to(bubble, {y: movement, ease: "none"}, 0)
+});
+
+// Home timeline
+const hometl = gsap.timeline();
+
+hometl.from('.titlespan', {
+    y: 30,
+    opacity: 0,
+    stagger: .4,
+    duration: 1
+})
+.from('.expanding-dot', {
+    width: 6,
+    duration: .5,
+}) 

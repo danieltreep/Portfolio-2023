@@ -119,10 +119,10 @@ h1 .highlight {
 
 h1 .expanding-dot {
     height: 6px;
-    width: 6px;
+    width: 120px;
     background-color: black;
     position: absolute;
-    bottom: 8px;
+    bottom: 6px;
     right: 100px;
     /* box-shadow: 0 4px #00000010; */
     z-index: -1;
