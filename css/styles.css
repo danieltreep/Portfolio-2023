@@ -95,29 +95,31 @@ a.active {
     height: calc(100svh - 75px);
     overflow: hidden;
 }
-h1 {
+.title {
     text-align: center;
     position: relative;
     margin-top: 25vh;
+}
+h1 {
     font-size: 30px;
 }
-h1 .highlight {
+.highlight {
+    position: relative;
     background: -webkit-linear-gradient(0deg, var(--main-color), var(--secondary-color));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    /* text-shadow: 0 4px #00000020; */
+    isolation: isolate;
+    z-index: 1;
 }
 
-h1 .expanding-dot {
+.expanding-dot {
     height: 6px;
     width: 120px;
     background-color: black;
     position: absolute;
-    bottom: 6px;
+    bottom: 4px;
     right: 100px;
-    /* box-shadow: 0 4px #00000010; */
-    z-index: -1;
 }
 
 .home button {
@@ -197,7 +199,9 @@ h2 {
 .about p {
     font-size: var(--font-size-larger);
 }
-
+.mask {
+    overflow: hidden;
+}
 /* PROJECTS SECTION */
 .projects {
     background-color: black;

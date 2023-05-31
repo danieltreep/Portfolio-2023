@@ -71,43 +71,55 @@ gsap.utils.toArray(".bubbleanimate").forEach(bubble => {
     tl.to(bubble, {y: movement, ease: "none"}, 0)
 });
 
+
 // Home timeline
 const hometl = gsap.timeline();
 
-hometl.from('.titlespan', {
-    y: 30,
+hometl.from('.h1animate', {
+    y: 20,
     opacity: 0,
     stagger: .4,
+    // scale: .8,
     duration: 1
 })
 .from('.expanding-dot', {
+    // y: 30,
     width: 6,
-    duration: .5,
+    duration: .4,
+})
+.from('.animate', {
+    opacity: 0,
+    y: 10,
+    stagger: .05,
+    duration: .2,
+    ease: 'power2'
 }) 
+.from('.bubbleanimate', {
+    opacity: 0,
+    stagger: .06,
+    y: 50,
+    ease: 'elastic',
+    duration: 3
+})
 
 // Fadein class
-function fadeIn(element) {
-    gsap.from(element, {
-        y: 50,
-        opacity: 0,
-    });
-}
-
 const fadein = gsap.timeline({
     scrollTrigger: {
-        trigger: ".fadein",
-        // markers: true,
-        stagger: {
-            repeat: -1
-        }
+        trigger: ".about",
+        markers: true,
+        start: 400,
    }
 });
 
-gsap.utils.toArray(".fadein").forEach(element => {
-    fadein.from(element, {opacity: 0, y: 50, duration: .8});
+fadein.from('.hide', {
+    yPercent: 40, 
+    opacity: 0, 
+    stagger: .2, 
+    rotate: 2, 
+    ease: 'power2'
 })
 
-// Slide in 
+// Slide 
 gsap.to('.first-row', {
     scrollTrigger: {
         trigger: '.bottle',

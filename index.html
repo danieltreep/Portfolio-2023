@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <h3>DANIËL <br> TREEP</h3>
+        <h3 class="animate">DANIËL <br> TREEP</h3>
         <div aria-hidden="true" class="bubble bubbleanimate large five" data-speed="2"></div>
-        <nav class="mainnav">
+        <nav class="mainnav animate" >
             <a href="#about">ABOUT</a>
             <a href="#projects" >PROJECTS</a>
             <a href="#contact">CONTACT</a>
@@ -22,19 +22,19 @@
     <main>
         <section class="home">
             
-            <h1 class="title fade">
-                <span class="titlespan"> FRONTEND DEVELOPER</span> <br>
-                <span class="titlespan"> WITH AN EYE FOR</span> <br>
-                <span class="highlight titlespan">DESIGN</span>
-                <span aria-hidden="true" class="expanding-dot titlespan"></span>
-            </h1>
-            <button class="fade"> <span> Download CV</span> 
+            <div class="title">
+                <h1 class="fade h1animate">FRONTEND DEVELOPER</h1>
+                <h1 class="fade h1animate">WITH AN EYE FOR</h1>
+                <h1 class="fade highlight h1animate">DESIGN</h1>
+                <div aria-hidden="true" class="expanding-dot h1animate fade"></div>
+            </div>
+            <button class="fade animate"> <span> Download CV</span> 
                 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.29289 15.7071C7.68342 16.0976 8.31658 16.0976 8.70711 15.7071L15.0711 9.34315C15.4616 8.95262 15.4616 8.31946 15.0711 7.92893C14.6805 7.53841 14.0474 7.53841 13.6569 7.92893L8 13.5858L2.34315 7.92893C1.95262 7.53841 1.31946 7.53841 0.928932 7.92893C0.538408 8.31946 0.538408 8.95262 0.928932 9.34315L7.29289 15.7071ZM7 0L7 15H9V0L7 0Z" fill="black"/>
                 </svg>
             </button>
-            <p class="location fade">AMSTERDAM</p>
-            <svg class="scroller fade" aria-hidden="true" width="25" height="50" viewBox="0 0 25 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <p class="location fade animate">AMSTERDAM</p>
+            <svg class="scroller fade animate" aria-hidden="true" width="25" height="50" viewBox="0 0 25 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect id="mouse" x="1" y="1" width="23" height="48" rx="11.5" stroke="#0D0D0D" stroke-width="2"/>
                 <rect id="scroller" x="9" y="9.18182" width="7" height="12.5455" rx="3.5" stroke="#0D0D0D" stroke-width="2"/>
             </svg>
@@ -47,8 +47,18 @@
             <div aria-hidden="true" class="bubble bubbleanimate large six" data-speed="1"></div>            
         </section>
         <section class="about" id="about">
-            <h2 class="fadein">ABOUT</h2>
-            <p class="fadein">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia praesentium eaque eveniet ea architecto similique optio a nesciunt. </p>
+            <div class="mask">
+                <h2 class="hide">ABOUT</h2>
+            </div>
+            <div class="mask">
+                <p class="hide">Lorem ipsum, dolor sit elit. Mollitia . </p>
+            </div>
+            <div class="mask">
+                <p class="hide">amet consectetur adipisicing </p>
+            </div>
+            <div class="mask">
+                <p class="hide">praesentium eaque eveniet ea architecto similique optio a nesciunt</p>
+            </div>
             <div aria-hidden="true" class="bubble medium photobubble" aria-hidden="true">
                 <img class="photo" src="images/Ik.jpg" alt="This is me">
             </div>
