@@ -23,15 +23,17 @@
     --linear-bottom: #E82E2E;
     --bubble-top: #FFFFFF;
     --bubble-bottom: #00000000;
+
+    --bubble-tiny: 30px;
     --bubble-small: 50px;
     --bubble-medium: 125px;
     --bubble-large: 225px;
 
     --font-size-smallest: 10px;
-    --font-size-small: 16px;
+    --font-size-small: 14px;
     --font-size-medium: 20px;
     --font-size-larger: 28px;
-    --font-size-largest: 60px;
+    --font-size-largest: 30px;
 }
 html {
     color-scheme: light dark;
@@ -51,11 +53,11 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-inline: 1rem;
+    align-items: start;
+    padding: 1rem 1rem 0;
     position: sticky;
     top: 0;
-    height: 75px;
+    height: calc(75px - 1rem);
     /* backdrop-filter: blur(100%); */
     /* background-color: rgba(0, 0, 0, 0.26); */
     z-index: 10;
@@ -101,7 +103,7 @@ a.active {
     margin-top: 25vh;
 }
 h1 {
-    font-size: 30px;
+    font-size: var(--font-size-largest);
 }
 .highlight {
     position: relative;
@@ -114,7 +116,8 @@ h1 {
 }
 
 .expanding-dot {
-    height: 6px;
+    height: 5%;
+    aspect-ratio: 1;
     width: 120px;
     background-color: black;
     position: absolute;
@@ -137,6 +140,7 @@ h1 {
     background-color: transparent;
     isolation: isolate;
     cursor: pointer;
+    font-size: var(--font-size-smallest);
 }
 
 .home button span {
@@ -168,7 +172,7 @@ h1 {
 
 .location { 
     position: absolute;
-    bottom: 5rem;
+    bottom: 4.3rem;
     left: -1rem;
     transform: rotate(-90deg);
     font-size: var(--font-size-small);
@@ -189,6 +193,7 @@ h1 {
 
 /* ABOUT SECTION */
 .about {
+    position: relative;
     padding: 2rem;
 }
 h2 {
@@ -230,6 +235,7 @@ h2 {
     color: white;
 }
 .project img {
+    border: 1px solid var(--main-color);
     border-radius: 5px;
 }
 .project a {
@@ -237,13 +243,16 @@ h2 {
     color: black;
     border-radius: 5px;
     padding: .2rem .5rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: .3rem;
     font-size: var(--font-size-smallest);
+}
+.description {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: start;
 }
 .projects-container::-webkit-scrollbar {
     display: none;
@@ -251,11 +260,25 @@ h2 {
 
 /* SKILLS SECTION */
 .skills {
+    height: 300px;
+    background-color: #000000;
+    transform: translateY(-20px);
     color: white;
-    font-size: 36px;
+    font-size: var(--font-size-largest);
     overflow: hidden;
     position: relative;
-    padding-bottom: 12rem;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: -20px;
+}
+.skills img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: .7;
+    z-index: -1;
 }
 .row {
     width: max-content;
@@ -276,7 +299,6 @@ h2 {
     bottom: 0;
     right: 0;
 }
-
 /* CONTACT SECTION */
 .contact {
     background-color: black;
@@ -339,17 +361,65 @@ footer path {
 /* OVERLAY SECTION */
 .overlay {
     background-image: linear-gradient(#00000000, #000000);
+    background-color: black;
     position: relative;
+    height: 200px;
+    clip-path: polygon(0% 0%, 0 100%, 50% 100%, 100% 100%, 100% 0, 50% 100%);
+    
 }
 
-.bottle {
-    max-height: 400px;
-    transform: translateY(-50px);
-    background-color: #000000;
-    margin-bottom: calc(-100%);
-    padding-bottom: 4rem;
-}
-.bottle img {
-    max-height: 400px;
-    opacity: .7;
+@media screen AND (min-width: 768px) {
+    :root {
+        --bubble-tiny: 40px;
+        --bubble-small: 80px;
+        --bubble-medium: 200px;
+        --bubble-large: 325px;
+
+        --font-size-smallest: 14px;
+        --font-size-small: 16px;
+        --font-size-medium: 24px;
+        --font-size-larger: 36px;
+        --font-size-largest: 50px;
+    }
+    header {
+        height: calc(90px - 1rem);
+    }
+    header h3 {
+        font-size: var(--font-size-medium);
+        text-align: start;
+    }
+    .home {
+        height: calc(100svh - 90px);
+    }
+    .expanding-dot {
+        width: 205px;
+        right: 165px;
+        bottom: 8px;
+    }
+    .about {
+        padding-inline: 5rem
+    }
+    .row-container {
+        height: 120px;
+    }
+    .overlay {
+        height: 300px;
+    }
+    .skills {
+        padding-bottom: 0;
+    }
+    .skills img {
+        max-height: 400px;
+    }
+
+    .projects-container {
+        padding: 2rem;
+    }
+    .projects-content {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        padding-inline: 0;
+        gap: 1rem;
+    }
+    
 }

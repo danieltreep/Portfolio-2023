@@ -74,6 +74,7 @@ gsap.utils.toArray(".bubbleanimate").forEach(bubble => {
 
 // Home timeline
 const hometl = gsap.timeline();
+const width = document.querySelector('.expanding-dot').clientHeight;
 
 hometl.from('.h1animate', {
     y: 20,
@@ -83,16 +84,15 @@ hometl.from('.h1animate', {
     duration: 1
 })
 .from('.expanding-dot', {
-    // y: 30,
-    width: 6,
+    width: width,
     duration: .4,
 })
 .from('.animate', {
     opacity: 0,
     y: 10,
-    stagger: .05,
-    duration: .2,
-    ease: 'power2'
+    stagger: .1,
+    duration: .3,
+    ease: 'ease'
 }) 
 .from('.bubbleanimate', {
     opacity: 0,
@@ -106,7 +106,7 @@ hometl.from('.h1animate', {
 const fadein = gsap.timeline({
     scrollTrigger: {
         trigger: ".about",
-        markers: true,
+        // markers: true,
         start: 400,
    }
 });
@@ -128,7 +128,8 @@ gsap.to('.first-row', {
         end: '350 40%',
         // markers: true
     },
-    xPercent: -60
+    xPercent: -60,
+    ease: 'ease'
 })
 
 gsap.to('.second-row', {
@@ -139,7 +140,9 @@ gsap.to('.second-row', {
         end: '350 40%',
         // markers: true
     },
-    xPercent: 60
+    xPercent: 60,
+    ease: 'ease'
+
 })
 
 // NAV 
@@ -188,3 +191,14 @@ gsap.to('.mainnav a:nth-of-type(3)', {
     }
 })
 
+// PROJECTS
+gsap.from('.projectanimate', {
+    scrollTrigger: {
+        trigger: '.project',
+        start: 'top 50%'
+    },
+    y: 20,
+    opacity: 0,
+    stagger: .1,
+    ease: 'ease'
+}) 
