@@ -152,44 +152,32 @@ gsap.to('header', {
         trigger: '.bottle',
         scrub: true
     },
-    backgroundColor: '#00000090',
-    backdropFilter: 'invert(100%)'
+    // backgroundColor: '#000000',
+    // backdropFilter: 'invert(100%)'
 })
 
-gsap.to('.mainnav a:nth-of-type(1)', {
-    scrollTrigger: {
-        trigger: '.about',
-        scrub: true,
-        toggleClass: {
-            targets: ".mainnav a:nth-of-type(1)", 
-            className: "active"
-        }
-    }
-})
+const sections = gsap.utils.toArray(".section");
+const navLinks = gsap.utils.toArray(".navlink");
 
-gsap.to('.mainnav a:nth-of-type(2)', {
-    scrollTrigger: {
-        trigger: '.projects',
-        scrub: true,
-        toggleClass: {
-            targets: ".mainnav a:nth-of-type(2)", 
-            className: "active"
-        },
-        end: 'bottom 40%'
-    }
-})
+sections.forEach((section, i) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 50%",
 
-gsap.to('.mainnav a:nth-of-type(3)', {
-    scrollTrigger: {
-        trigger: '.contact',
-        scrub: true,
-        toggleClass: {
-            targets: ".mainnav a:nth-of-type(3)", 
-            className: "active"
-        },
-        start: '200px 80%',
+    onEnter: () => {
+      navLinks.forEach((e) => {
+        e.classList.remove("active");
+      });
+      navLinks[i].classList.add("active");
+    },
+    onEnterBack: () => {
+      navLinks.forEach((e) => {
+        e.classList.remove("active");
+      });
+      navLinks[i].classList.add("active");
     }
-})
+  });
+});
 
 // PROJECTS
 gsap.from('.projectanimate', {

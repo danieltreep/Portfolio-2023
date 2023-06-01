@@ -12,7 +12,7 @@
     position: absolute;
     overflow: hidden;
     z-index: -1;
-    opacity: .6;
+    opacity: .5;
 }
 .bubble img {
     opacity: 0;
@@ -57,6 +57,7 @@
 .five {
     top: -160px;
     right: 15%;
+    z-index: 100;
 }
 .six {
     top: 50%;

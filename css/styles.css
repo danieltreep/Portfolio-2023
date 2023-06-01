@@ -67,6 +67,9 @@ header h3 {
     font-size: var(--font-size-small);
     text-align: start;
 }
+.logo {
+    width: 30px;
+}
 nav {
     display: flex;
     position: relative;
@@ -80,14 +83,16 @@ nav {
 }
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(216, 201, 201);
     transition: .3s;
 }
 a.active {
     font-size: calc(var(--font-size-smallest) + 2px);
     color: var(--main-color);
 }
-
+.navlinkhome {
+    display: none;
+}
 /* HOME SECTION */
 .home {
     display: flex;
@@ -181,6 +186,7 @@ h1 {
     position: absolute;
     right: 1.5rem;
     bottom: 2rem;
+    height: 40px;
 }
 #scroller {
     animation: bounce 5s infinite ease-in-out;
@@ -303,7 +309,8 @@ h2 {
 .contact {
     background-color: black;
     color: white;
-    padding: 15vw;
+    padding: 15rem 15vw 15vw;
+    
 }
 form {
     display: flex;
@@ -365,7 +372,7 @@ footer path {
     position: relative;
     height: 200px;
     clip-path: polygon(0% 0%, 0 100%, 50% 100%, 100% 100%, 100% 0, 50% 100%);
-    
+    /* opacity: .5; */
 }
 
 @media screen AND (min-width: 768px) {
@@ -387,6 +394,9 @@ footer path {
     header h3 {
         font-size: var(--font-size-medium);
         text-align: start;
+    }
+    .logo {
+        height: 40px;
     }
     .home {
         height: calc(100svh - 90px);
