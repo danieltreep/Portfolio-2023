@@ -152,7 +152,7 @@ gsap.to('header', {
         trigger: '.bottle',
         scrub: true
     },
-    // backgroundColor: '#000000',
+    backgroundColor: '#000000',
     // backdropFilter: 'invert(100%)'
 })
 
@@ -182,8 +182,8 @@ sections.forEach((section, i) => {
 // PROJECTS
 gsap.from('.projectanimate', {
     scrollTrigger: {
-        trigger: '.project',
-        start: 'top 50%'
+        trigger: '.projects',
+        start: 'top 30%',
     },
     y: 20,
     opacity: 0,

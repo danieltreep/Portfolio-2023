@@ -65,15 +65,17 @@
 }
 .photobubble {
     position: relative;
-    margin: 4rem auto;
+    margin: 4rem auto 8rem;
     z-index: 0;
     opacity: 1;
 }
 .about .small {
-    bottom: 0;
-    left: 30%;
+    bottom: 15%;
+    left: 35%;
+    z-index: 1;
 }
 .about .tiny {
-    bottom: -15%;
-    right: 40%;
+    bottom: 5%;
+    right: 45%;
+    z-index: 1;
 }
