@@ -259,7 +259,7 @@ h2 {
 }
 .description {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 1fr;
     align-items: start;
 }
 .projects-container::-webkit-scrollbar {
@@ -315,11 +315,11 @@ h2 {
 .contact {
     background-color: black;
     color: white;
-    padding: 10rem 15vw 15vw;
+    padding: 6rem 2rem 4rem;
     position: relative;
 }
 .contact h2 {
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 form {
     max-width: 500px;
@@ -330,6 +330,7 @@ form {
 }
 label {
     margin: 1rem 0 .3rem;
+    font-size: var(--font-size-small);
 }
 input,
 textarea {
@@ -353,6 +354,10 @@ form button {
     align-items: center;
     gap: .5rem;
     color: black;
+    font-size: var(--font-size-small);
+}
+form button svg {
+    height: 14px;
 }
 #windmill {
     opacity: .6;

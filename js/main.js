@@ -6,11 +6,11 @@ const photobubbletl = gsap.timeline({defaults: {
         trigger: '.about',
         scrub: true,
         // markers: true,
-        end: '100'
+        end: '200'
     },
 }});
 
-photobubbletl.from('.photobubble', {y: 400})
+photobubbletl.from('.photobubble', {y: 500})
     .to('.photo', { opacity: 1 });
 
 
