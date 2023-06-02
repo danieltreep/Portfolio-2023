@@ -316,6 +316,7 @@ h2 {
     background-color: black;
     color: white;
     padding: 15rem 15vw 15vw;
+    position: relative;
 }
 form {
     max-width: 500px;
@@ -350,6 +351,11 @@ form button {
     gap: .5rem;
     color: black;
 }
+#windmill {
+    opacity: .6;
+}
+
+/*  */
 footer {
     background-color: black;
     color: white;

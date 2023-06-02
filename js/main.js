@@ -190,3 +190,12 @@ gsap.from('.projectanimate', {
     stagger: .1,
     ease: 'ease'
 }) 
+
+gsap.to('#mills', {
+    scrollTrigger: {
+        scrub: true,
+        trigger: '.contact'
+    },
+    rotate: 360,
+    transformOrigin: 'center center'
+})
