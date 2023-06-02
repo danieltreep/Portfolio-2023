@@ -23,7 +23,7 @@
     opacity: 1;
 }
 .waldo:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 .tiny {
     height: var(--bubble-tiny);
