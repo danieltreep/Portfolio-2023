@@ -109,11 +109,12 @@ const fadein = gsap.timeline({
 });
 
 fadein.from('.hide', {
-    yPercent: 40, 
+    yPercent: 100, 
     opacity: 0, 
-    stagger: .2, 
-    rotate: 2, 
-    ease: 'power2'
+    stagger: .05, 
+    rotate: 5, 
+    duration: .5,
+    ease: 'ease'
 })
 
 // Slide 

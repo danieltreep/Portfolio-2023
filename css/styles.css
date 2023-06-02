@@ -131,7 +131,7 @@ h1 {
     right: 100px;
 }
 
-.home button {
+.home a {
     display: flex;
     align-items: center;
     justify-content: stretch;
@@ -149,17 +149,17 @@ h1 {
     font-size: var(--font-size-smallest);
 }
 
-.home button span {
+.home a span {
     background-color: var(--main-color);
     border-radius: 25px;
     padding: .5rem .8rem;
 }
 
-.home button svg {
+.home a svg {
     padding: .4rem;
     transition: .3s;
 }
-.home button::after {
+.home a::after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -169,10 +169,10 @@ h1 {
     border-radius: 25px;
     transition: .3s;
 }
-.home button:hover::after {
+.home a:hover::after {
     width: 100%;
 }
-.home button:hover svg {
+.home a:hover svg {
    padding-left: 0;
 }
 
@@ -216,6 +216,9 @@ h2 {
 .mask {
     overflow: hidden;
 }
+.margin {
+    margin-top: 1rem;
+}
 /* PROJECTS SECTION */
 .projects {
     background-color: black;
@@ -246,7 +249,6 @@ h2 {
     color: var(--font-light);
 }
 .project img {
-    /* border: 1px solid var(--secondary-color); */
     border-radius: 5px;
 }
 .project a {
@@ -264,6 +266,13 @@ h2 {
     display: grid;
     grid-template-columns: 5fr 1fr;
     align-items: start;
+}
+.projectdescription {
+    font-size: var(--font-size-small);
+    font-family: sans-serif;
+    grid-column: 1 / span 2;
+    margin-top: .5rem;
+    color: rgb(184, 184, 184);
 }
 .projects-container::-webkit-scrollbar {
     display: none;
