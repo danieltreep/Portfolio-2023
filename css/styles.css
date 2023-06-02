@@ -79,7 +79,7 @@ nav {
     text-align: end;
     gap: .2rem;
     /* margin-right: 1rem; */
-    font-size: 12px;
+    font-size: 10px;
     isolation: isolate;
 }
 a {
@@ -371,7 +371,7 @@ form button {
     align-items: center;
     gap: .5rem;
     color: black;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-smallest);
 }
 form button svg {
     height: 14px;
@@ -474,6 +474,9 @@ footer path {
     }
     .contact {
         padding-inline: 4rem;
+    }
+    nav { 
+        font-size: 12px;
     }
 }
 @media (max-width: 300px) {
