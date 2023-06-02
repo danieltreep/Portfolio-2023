@@ -315,8 +315,11 @@ h2 {
 .contact {
     background-color: black;
     color: white;
-    padding: 15rem 15vw 15vw;
+    padding: 10rem 15vw 15vw;
     position: relative;
+}
+.contact h2 {
+    margin-top: 3rem;
 }
 form {
     max-width: 500px;
@@ -359,7 +362,14 @@ form button {
 footer {
     background-color: black;
     color: white;
-    padding-block: 2rem;
+    /* padding-block: 8rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 300px;
+    background-image: url('../images/amsterdam.svg');
+    background-repeat: repeat-x;
+    background-position: bottom center;
 }
 .links {
     display: flex;

@@ -152,8 +152,8 @@ gsap.to('header', {
         trigger: '.bottle',
         scrub: true
     },
-    backgroundColor: '#000000',
-    // backdropFilter: 'invert(100%)'
+    backgroundColor: '#00000080',
+    backdropFilter: 'invert(100%)'
 })
 
 const sections = gsap.utils.toArray(".section");
