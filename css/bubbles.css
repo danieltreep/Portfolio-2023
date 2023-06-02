@@ -38,7 +38,7 @@
     height: var(--bubble-large);
 }
 .one {
-    top: 10%;
+    top: 12%;
     left: 15%;
     z-index: 0;
 }
@@ -66,7 +66,7 @@
 .photobubble {
     position: relative;
     margin: 4rem auto 8rem;
-    z-index: 0;
+    z-index: 2;
     opacity: 1;
 }
 .about .small {
@@ -78,4 +78,18 @@
     bottom: 5%;
     right: 45%;
     z-index: 1;
+}
+
+@media screen AND (min-width: 768px) {
+    .about .small {
+        left: 40%;
+    }
+}
+@media screen AND (min-width: 1024px) {
+    .about .small {
+        left: 43%;
+    }
+    .about .tiny {
+        right: 47%;
+    }
 }

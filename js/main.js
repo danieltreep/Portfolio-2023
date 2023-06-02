@@ -14,9 +14,6 @@ photobubbletl.from('.photobubble', {y: 500})
     .to('.photo', { opacity: 1 });
 
 
-
-
-
 // Fade out
 gsap.to('.fade', {
     scrollTrigger: {
@@ -124,11 +121,9 @@ gsap.to('.first-row', {
     scrollTrigger: {
         trigger: '.bottle',
         scrub: true,
-        start: 'top 55%',
-        end: '350 40%',
         // markers: true
     },
-    xPercent: -60,
+    xPercent: -80,
     ease: 'ease'
 })
 
@@ -136,24 +131,21 @@ gsap.to('.second-row', {
     scrollTrigger: {
         trigger: '.bottle',
         scrub: true,
-        start: 'top 55%',
-        end: '350 40%',
         // markers: true
     },
-    xPercent: 60,
+    xPercent: 80,
     ease: 'ease'
 
 })
 
 // NAV 
-
 gsap.to('header', {
     scrollTrigger: {
         trigger: '.bottle',
         scrub: true
     },
-    backgroundColor: '#00000080',
-    backdropFilter: 'invert(100%)'
+    // backgroundColor: '#00000080',
+    // backdropFilter: 'invert(70%)'
 })
 
 const sections = gsap.utils.toArray(".section");
@@ -179,18 +171,7 @@ sections.forEach((section, i) => {
   });
 });
 
-// PROJECTS
-gsap.from('.projectanimate', {
-    scrollTrigger: {
-        trigger: '.projects',
-        start: 'top 30%',
-    },
-    y: 20,
-    opacity: 0,
-    stagger: .1,
-    ease: 'ease'
-}) 
-
+// Windmill
 gsap.to('#mills', {
     scrollTrigger: {
         scrub: true,

@@ -23,6 +23,7 @@
     --linear-bottom: #E82E2E;
     --bubble-top: #FFFFFF;
     --bubble-bottom: #00000000;
+    --font-light: rgb(231, 231, 231);
 
     --bubble-tiny: 30px;
     --bubble-small: 50px;
@@ -83,7 +84,7 @@ nav {
 }
 a {
     text-decoration: none;
-    color: rgb(231, 231, 231);
+    color: var(--font-light);
     transition: .3s;
 }
 a.active {
@@ -99,7 +100,7 @@ a.active {
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: calc(100svh - 75px);
+    min-height: calc(100svh - 75px);
     overflow: hidden;
 }
 .title {
@@ -137,7 +138,7 @@ h1 {
     outline: transparent;
     border: 1px solid var(--main-color);
     position: absolute;
-    bottom: 10rem;
+    bottom: 8rem;
     box-shadow: 0 4px #0000003a;
     border-radius: 25px;
     z-index: 1;
@@ -227,12 +228,14 @@ h2 {
     scrollbar-width: none;  /* Firefox */
 }
 .projects-content {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 70vw);
     gap: 2rem;
     width: 210vw;
     margin-right: 15vw;
     padding-inline: 15vw;
+    z-index: 2;
 }
 .project {
     position: relative;
@@ -240,10 +243,10 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: white;
+    color: var(--font-light);
 }
 .project img {
-    border: 1px solid var(--main-color);
+    /* border: 1px solid var(--secondary-color); */
     border-radius: 5px;
 }
 .project a {
@@ -265,13 +268,25 @@ h2 {
 .projects-container::-webkit-scrollbar {
     display: none;
 }
+.xxx1 {
+    position: absolute;
+    left: -1rem;
+    top: 10%;
+    opacity: .6;
+}
+.xxx2 {
+    position: absolute;
+    right: -5rem;
+    bottom: 20%;
+    opacity: .6;
 
+}
 /* SKILLS SECTION */
 .skills {
     height: 300px;
     background-color: #000000;
     /* transform: translateY(-20px); */
-    color: white;
+    color: var(--font-light);
     font-size: var(--font-size-largest);
     overflow: hidden;
     position: relative;
@@ -282,6 +297,7 @@ h2 {
     /* margin-bottom: -20px; */
 }
 .skills img {
+    scale: .8;
     position: absolute;
     top: 0;
     right: 0;
@@ -306,15 +322,16 @@ h2 {
 }
 .row:nth-of-type(1) {
     top: 0;
+    left: 60%;
 }
 .row:nth-of-type(2) {
     bottom: 0;
-    right: 0;
+    right: 60%;
 }
 /* CONTACT SECTION */
 .contact {
     background-color: black;
-    color: white;
+    color: var(--font-light);
     padding: 6rem 2rem 4rem;
     position: relative;
 }
@@ -329,7 +346,7 @@ form {
     margin: 0 auto;
 }
 label {
-    margin: 1rem 0 .3rem;
+    margin: 1.5rem 0 .3rem;
     font-size: var(--font-size-small);
 }
 input,
@@ -337,7 +354,7 @@ textarea {
     background-color: #4848483b;
     border-radius: 5px;
     outline: none;
-    border: 1px solid #D9D9D9;
+    border: 1px solid #696969;
     padding: 1rem;
     color: whitesmoke;
 }
@@ -360,14 +377,14 @@ form button svg {
     height: 14px;
 }
 #windmill {
-    opacity: .6;
+    opacity: .5;
+    scale: 1.2;
 }
 
 /*  */
 footer {
     background-color: black;
-    color: white;
-    /* padding-block: 8rem; */
+    color: var(--font-light);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -383,7 +400,7 @@ footer {
     padding-block: 1rem;
 }
 footer a {
-    color: white;
+    color: var(--font-light);
     display: flex;
 }
 footer path {
@@ -407,19 +424,14 @@ footer path {
         --font-size-larger: 36px;
         --font-size-largest: 50px;
     }
-    header {
-        height: calc(90px - 1rem);
-    }
     header h3 {
         font-size: var(--font-size-medium);
         text-align: start;
     }
     .logo {
-        height: 40px;
+        width: 40px;
     }
-    .home {
-        height: calc(100svh - 90px);
-    }
+    
     .expanding-dot {
         width: 205px;
         right: 165px;
@@ -439,10 +451,11 @@ footer path {
     }
     .skills img {
         max-height: 400px;
+        scale: .9;
     }
 
     .projects-container {
-        padding: 2rem;
+        padding: 2rem 4rem;
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -450,7 +463,52 @@ footer path {
         max-width: 100%;
         grid-template-columns: repeat(3, 1fr);
         padding-inline: 0;
-        gap: 1rem;
+        gap: 2rem;
     }
-    
+    .xxx1 {
+        left: -5rem;
+        
+    }
+    #windmill {
+        scale: 1.5;
+    }
+    .contact {
+        padding-inline: 4rem;
+    }
+}
+@media (max-width: 300px) {
+    .expanding-dot {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) AND (max-width: 900px) {
+    .home {
+        min-height: 150svh;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --font-size-smallest: 14px;
+        --font-size-small: 16px;
+        --font-size-medium: 24px;
+        --font-size-larger: 46px;
+        --font-size-largest: 70px;
+    }
+    .row-container {
+        height: 160px;
+    }
+    .expanding-dot {
+        width: 285px;
+        right: 230px;
+        bottom: 8px;
+    }
+    .skills {
+        height: 420px;
+    }
+    .skills img {
+        max-height: 500px;
+        scale: .9;
+    }
 }
