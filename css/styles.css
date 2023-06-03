@@ -82,6 +82,25 @@ nav {
     font-size: 10px;
     isolation: isolate;
 }
+nav a {
+    position: relative;
+}
+nav a::after {
+    content: '';
+    background-color: var(--main-color);
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    transition: .3s;
+    opacity: 0;
+    border-radius: 50%;
+}
+nav a:hover::after {
+    transform: translateX(10px);
+    opacity: 1;
+}
 a {
     text-decoration: none;
     color: var(--font-light);
@@ -445,10 +464,6 @@ footer path {
         font-size: var(--font-size-medium);
         text-align: start;
     }
-    .logo {
-        width: 40px;
-    }
-    
     .expanding-dot {
         width: 205px;
         right: 165px;
@@ -457,9 +472,6 @@ footer path {
     .about {
         padding-inline: 5rem
     }
-    /* .sentence {
-        display: flex;
-    } */
     .row-container {
         height: 120px;
     }
