@@ -47,7 +47,7 @@
     --font-size-largest: 30px;
 }
 html {
-    color-scheme: only light;
+    color-scheme: dark light;
 }
 img,
 .bottle svg {
@@ -540,5 +540,17 @@ footer path {
     }
     .about {
         background-image: linear-gradient(#00000000 10%, #000000);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-color: #60EBA8;
+        --secondary-color: #3fd7eb;
+        --linear-top: #C743A2;
+        --linear-bottom: #E82E2E;
+        --bubble-top: #FFFFFF;
+        --bubble-bottom: #00000000;
+        --font-light: rgb(231, 231, 231);
     }
 }
