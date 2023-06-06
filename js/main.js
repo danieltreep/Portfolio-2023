@@ -71,18 +71,13 @@ gsap.utils.toArray(".bubbleanimate").forEach(bubble => {
 
 // Home timeline
 const hometl = gsap.timeline();
-const width = document.querySelector('.expanding-dot').clientHeight;
 
 hometl.from('.h1animate', {
     y: 20,
     opacity: 0,
     stagger: .4,
     // scale: .8,
-    duration: 1
-})
-.from('.expanding-dot', {
-    width: width,
-    duration: .4,
+    duration: .8
 })
 .from('.animate', {
     opacity: 0,
