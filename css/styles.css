@@ -110,6 +110,7 @@ a {
     text-decoration: none;
     color: var(--font-light);
     transition: .3s;
+    cursor: pointer;
 }
 a.active {
     font-size: calc(var(--font-size-smallest) + 2px);
@@ -278,7 +279,7 @@ h2 {
 .project img {
     border-radius: 5px;
 }
-.project a {
+.desclinks a:nth-child(2) {
     background-color: var(--main-color);
     color: black;
     border-radius: 5px;
@@ -289,8 +290,13 @@ h2 {
     gap: .3rem;
     font-size: var(--font-size-smallest);
 }
+.desclinks {
+    display: flex;
+    gap: .3rem;
+}
 .description {
     display: grid;
+    justify-content: space-between;
     grid-template-columns: 5fr 1fr;
     align-items: start;
 }
@@ -301,6 +307,10 @@ h2 {
     margin-top: .5rem;
     color: rgb(184, 184, 184);
     line-height: 1.4;
+}
+.github {
+    width: 23px;
+    height: 23px;
 }
 .projects-container::-webkit-scrollbar {
     display: none;
@@ -450,7 +460,31 @@ footer path {
 .waldo {
     font-size: var(--font-size-smallest);
 }
-
+.videoModal {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000099;
+    z-index: 100;
+}
+.close {
+    display: flex;
+    top: 2rem;
+    right: 2rem;
+    gap: .5rem;
+    color: white;
+    width: max-content;
+    cursor: pointer;
+}
+video {
+    width: 90%;
+}
 /* MEDIA QUERIES */
 @media screen AND (min-width: 768px) {
     :root {
